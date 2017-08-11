@@ -44,7 +44,7 @@ all: TCPMSNClientCLI
 TCPMSNClientCLI: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/eontorch/networkingProgrammingLabProject/30-7-17-works until send message.zip_expanded/TCPMSNClient/Debug" -L"/home/eontorch/networkingProgrammingLabProject/30-7-17-works until send message.zip_expanded/SocketUtils/Debug" -pthread -o "TCPMSNClientCLI" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/idan/git/netProgLab/8-8-17.zip_expanded/TCPMSNClient/Debug" -L"/home/idan/git/netProgLab/8-8-17.zip_expanded/SocketUtils/Debug" -pthread -o "TCPMSNClientCLI" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -54,5 +54,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
+.SECONDARY:
 
 -include ../makefile.targets
